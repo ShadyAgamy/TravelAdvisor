@@ -14,11 +14,12 @@ const Map = ({setBounds, setCoordinates, coordinates, places, setChildClicked}) 
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyBlz05Caoll6KIqofsnlCCAJH0YoAu_KoI' }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
+        yesIWantToUseGoogleMapApiInternals
         options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
         onChange={e => {
           console.log("changed")

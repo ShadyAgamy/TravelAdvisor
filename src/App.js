@@ -16,7 +16,7 @@ function App() {
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-
+console.log(places)
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
