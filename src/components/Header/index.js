@@ -25,7 +25,7 @@ const Header = ({setCoordinates}) => {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar className={classes.appbar} position="static"  style={{ background: '#2E3B55' }}>
       <Toolbar className={classes.toolbar}>
         <Typography variant="h5" className={classes.title}>
           Travel Advisor
