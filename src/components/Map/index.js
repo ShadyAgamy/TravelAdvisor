@@ -22,8 +22,6 @@ const Map = ({setBounds, setCoordinates, coordinates, places, setChildClicked}) 
         yesIWantToUseGoogleMapApiInternals
         options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
         onChange={e => {
-          console.log("changed")
-          console.log(e)
           setCoordinates({lat:e.center.lat, lng: e.center.lng});
           setBounds({ne: e.marginBounds.ne, sw: e.marginBounds.sw})
         }}

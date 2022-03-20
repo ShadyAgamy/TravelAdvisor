@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { CssBaseline } from "@material-ui/core";
-import Header from "./components/Header";
+
 import HomePage from "./components/HomePage";
 import PlaceDetailsPage from "./components/PlaceDetailsPage";
 
@@ -19,8 +19,6 @@ function App() {
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  console.log(places);
-  console.log(filteredPlaces);
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -66,7 +64,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Header setCoordinates={setCoordinates} />
+      
       <Routes>
         <Route
           path="/"
